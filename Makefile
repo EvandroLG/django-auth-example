@@ -1,6 +1,6 @@
 .SILENT:
 run:
-    python project/manage.py runserver
+	python project/manage.py runserver
 
 test:
-    python project/manage.py test    
+	python project/manage.py test    
