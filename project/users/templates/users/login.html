@@ -1,11 +1,6 @@
 {% extends "base.html" %}
-{% load static %}
 
 {% block content %}
-    {% if form.errors %}
-        <p class="error">Desculpe, usuário inválido!</p>
-    {% endif %}
-
     <form action="/user/auth/" method="post"> {% csrf_token %}
         <label for="username">User name:</label>
         <input type="text" id="username" name="username">

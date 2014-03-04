@@ -62,4 +62,4 @@ def auth_view(request):
 
 def logout_view(request):
   auth.logout(request)
-  return render_to_response('cantadas/index.html')
+  return HttpResponse(status=200)
