@@ -1,0 +1,35 @@
+{% load staticfiles %}
+{% load compress %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>
+            {% block head_title %} Vê Se Cola {% endblock %}
+        </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% compress css %}
+            <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        {% endcompress %}
+    </head>
+    <body>
+        <header>
+            <h1>Vê Se Cola</h1>
+
+        </header>
+        {% block content %}{% endblock %}
+
+        <footer>
+            <p>Copyright 2014 Vê Se Cola</p>
+        </footer>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="{% static 'js/underscore-min.js' %}"></script>
+        <script src="{% static 'js/backbone-min.js' %}"></script>
+
+        {% block script %}{% endblock %}
+    </body>
+</html>
